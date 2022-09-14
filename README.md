@@ -5,7 +5,7 @@ A partir del 20 de septiembre 20222 el sii cambiará la autenticación SSL 1.0 a
 <br>Las Integraciones con Php 5.5 o superior ya vienen por default con la versión 1.2
 <br>Por defecto php utiliza la mayor versión disponible.
 
-<img src="https://www.factronica.cl/blog/img/blog_8.png">
+<img src="https://www.factronica.cl/blog/img/blog_9.png">
 
 <h3>Línea que se debe agregar para forzar la conexión ssl versión 1.3</h3>
 

@@ -23,3 +23,6 @@ A partir del 20 de septiembre 20222 el sii cambiará la autenticación SSL 1.0 a
 <br>
 <br>Para consultar la versión de php curl puede utilizar el siguiente comando:
 <br>var_dump(curl_version());
+<br>
+<br>$info = curl_getinfo($handler);
+<br>print_r(curl_getinfo($handler,CURLINFO_HEADER_OUT)); 

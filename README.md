@@ -28,6 +28,7 @@ A partir del 20 de septiembre 20222 el sii cambiará la autenticación SSL 1.0 a
 <br>print_r(curl_getinfo($handler,CURLINFO_HEADER_OUT)); 
 
 <h3>Ejemplo:</h3>
+
 ```
 <?php
 $handler = curl_init();
@@ -50,3 +51,4 @@ curl_setopt($handler, CURLOPT_FILE, $archivito);
 $result = curl_exec ($handler);
 ?>
 ```
+

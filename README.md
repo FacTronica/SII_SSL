@@ -26,3 +26,27 @@ A partir del 20 de septiembre 20222 el sii cambiará la autenticación SSL 1.0 a
 <br>
 <br>$info = curl_getinfo($handler);
 <br>print_r(curl_getinfo($handler,CURLINFO_HEADER_OUT)); 
+
+<h3>Ejemplo:</h3>
+```
+<?php
+$handler = curl_init();
+curl_setopt($handler, CURLOPT_URL, $this->_url);
+curl_setopt($handler, CURLOPT_PORT, 443);
+curl_setopt($handler, CURLOPT_VERBOSE, 1);
+curl_setopt($handler, CURLOPT_HTTPHEADER, $cabecera);
+curl_setopt($handler, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_0);
+curl_setopt($handler, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($handler, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($handler, CURLOPT_TIMEOUT, 30);
+curl_setopt($handler, CURLOPT_SSL_VERIFYHOST, 2);
+curl_setopt($handler, CURLOPT_SSL_VERIFYPEER, 0);
+// FORZAR LA CONEXION SSL POR VERSION 1.3
+curl_setopt($handler, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_3); 
+curl_setopt($handler, CURLOPT_POSTFIELDS, $cuerpo);
+curl_setopt($handler, CURLOPT_HEADER, 0);
+curl_setopt($handler, CURLINFO_HEADER_OUT, $CURLINFO_HEADER_OUT);// ocultar el retorno del sii
+curl_setopt($handler, CURLOPT_FILE, $archivito);
+$result = curl_exec ($handler);
+?>
+```

@@ -3,7 +3,7 @@ Conexión al SII con SSL Versión 1.2
 
 A partir del 20 de septiembre 20222 el sii cambiará la autenticación SSL 1.0 a la versión 1.2.
 <br>Las Integraciones con Php 5.5 o superior ya vienen por default con la versión 1.2
-<br>Por defecto php utiliza la mayor versión disponible.
+<br>Por defecto php utiliza la mayor versión disponible en este caso la versión 1.2
 
 <img src="https://www.factronica.cl/blog/img/blog_9.png">
 

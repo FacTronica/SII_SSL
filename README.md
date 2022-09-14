@@ -24,10 +24,17 @@ A partir del 20 de septiembre 20222 el sii cambiará la autenticación SSL 1.0 a
 <br>Para consultar la versión de php curl puede utilizar el siguiente comando:
 <br>var_dump(curl_version());
 <br>
-<br>$info = curl_getinfo($handler);
-<br>print_r(curl_getinfo($handler,CURLINFO_HEADER_OUT)); 
 
-<h3>Ejemplo:</h3>
+<h3>Ejemplo para ver la versión de php curl:</h3>
+
+```
+<?php
+$info = curl_getinfo($handler);
+print_r(curl_getinfo($handler,CURLINFO_HEADER_OUT)); 
+?>
+```
+
+<h3>Ejemplo para Forzar la conexión por ssl versión 1.3:</h3>
 
 ```
 <?php
@@ -46,7 +53,7 @@ curl_setopt($handler, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($handler, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_3); 
 curl_setopt($handler, CURLOPT_POSTFIELDS, $cuerpo);
 curl_setopt($handler, CURLOPT_HEADER, 0);
-curl_setopt($handler, CURLINFO_HEADER_OUT, $CURLINFO_HEADER_OUT);// ocultar el retorno del sii
+curl_setopt($handler, CURLINFO_HEADER_OUT, $CURLINFO_HEADER_OUT);
 curl_setopt($handler, CURLOPT_FILE, $archivito);
 $result = curl_exec ($handler);
 ?>
